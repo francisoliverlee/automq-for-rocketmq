@@ -37,9 +37,10 @@ Compared to Apache RocketMQ, AutoMQ for Apache RocketMQ offers the following adv
 Pre-requirements: docker and docker-compose
 
 1. Clone the project via git: `git clone https://github.com/AutoMQ/automq-for-rocketmq.git && cd automq-for-rocketmq`
-2. Run `./distribution/build.sh` to build the docker image.
-3. Run `./distribution/compose.sh` to start the service, which includes 1 MySQL server and 2 RocketMQ brokers.
-4. Start the producer and consumer to produce and consume messages,
+2. Install flatbuffers. run `brew install flatbuffers` on Macos. for linux build from `https://github.com/google/flatbuffers.git`. 
+3. Run `./distribution/docker/build.sh` to build the docker image.
+4. Run `./distribution/docker/compose.sh` to start the service, which includes 1 MySQL server and 2 RocketMQ brokers.
+5. Start the producer and consumer to produce and consume messages,
    See [rocketmq-clients](https://github.com/apache/rocketmq-clients) for more details.
 
 [maven-build-image]: https://github.com/AutoMQ/automq-for-rocketmq/actions/workflows/coverage-ci.yml/badge.svg?branch=main
